@@ -37,42 +37,61 @@ body{
 
 .navbar > .navbar-list > .navbar-item{
     display: inline-block;   
-    font-size: 16px;
+    font-size: 20px;    
+    margin-right: 10px;
 }
-
-
 
 .navbar > .navbar-list > .navbar-item a{
     padding: 20px;
     text-decoration: none;
-    color: rgba(0, 0,0, 0.9);
+    color:whitesmoke;
     display: inline-block;   
-    transition: background-color 0.5s linear;
+    transition: border 0.5s linear;
 }
 
-.navbar > .navbar-list > .navbar-item.active a{
-    color:var(--main-text-color);
-    background-color: var(--secondary-color);    
+.navbar > .navbar-list > .navbar-item.active a{    
+    border:1px solid #666666;    
+    color:white;
 }
 
 .navbar > .navbar-list > .navbar-item a:hover{
-    color: var(--main-text-color);
-    /*background-color: var(--secondary-color);*/
+    color: var(--main-text-color);    
     border:1px solid #666666;
 }
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
 
-.title-img{
-    background-size: 100% 100%;
+#particles-js {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:blueviolet;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#title-img{
+    /*background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(../images/animated/EngineeringIoT_Listical_1.gif);
     height: 100vh;
-    transition: background-size 0.5s;
+    transition: background-size 0.5s;*/
+    border: 1px solid #000;
+    background: url(../images/static/foto.jpg) no-repeat center center;
+    width: 20%;
+    height: 20%;
 }
 
 .title-img:hover{
     background-size: 115% 115%;
 }
+/*
 .title {
 	position: absolute;
     left: 0;
@@ -80,7 +99,7 @@ body{
     width: 100%;
     text-align: center;
     font-size: 100px;
-    color: white;
+    color: black;
     font-family: batman;
     z-index: 1;
     animation: titleanimation 2s forwards;
@@ -102,3 +121,4 @@ body{
     animation-delay: 1s;
     
 }
+*/
