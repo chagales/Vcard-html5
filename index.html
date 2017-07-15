@@ -11,38 +11,88 @@
 </head>
 <body>
     <header>
-        <h1 class="title"> I'm Federico Muñoz</h1>
-        <!--<img src="./images/animated/EngineeringIoT_Listical_1.gif" alt="prueba">-->
-        <div id="particles-js"></div>
-        <div id="title-img" class="tittle-img">        
+        <div id="header" class="header-section">
+            
+            <!--<img src="./images/animated/EngineeringIoT_Listical_1.gif" alt="prueba">-->
+            <div id="particles-js"></div>
+            <div id="background-header" class="back-header"></div>
+            <div id="title-img" class="tittle-img">        
+            </div>
+            <div class="card"></div>
+            <h1 class="title"> I'm Federico Muñoz</h1>
+            <p class="title-cite">Full IoT Solution Maker</p>
+            <strong class="resume-info">A new technology and a passionate  entrepreneur, who has the background (>7 years) in R&D, blue chip, startup , with many different responsibilities, involved in several stages of the innovation projects, from the early conception idea and brainstorming to the implementation stage. ranging from intern to CIO/CTO. A proven and effective team worker, team leader having practical work behaviour, capability to design, develop and test products in different sectors like IoT, M2M, Elevator Industry, Mobiles, Fintech, among others.</strong>            
         </div>
-        <p class="title-cite">Full IoT Solution Maker</p>
     </header>
 
 	<nav class="navbar">
         <ul class="navbar-list">
             <li class="navbar-item active">
                 <a href="#about" class="smooth">About Me</a>
-            </li>
+            </li>       
             <li class="navbar-item">
-                <a href="#resume" class="smooth">Resume</a>
-            </li>
+                <a href="#me" class="smooth">Skills</a>
+            </li>     
             <li class="navbar-item">
                 <a href="#work" class="smooth">My Work</a>
             </li>
-            <li class="navbar-item">
-                <a href="#me" class="smooth">MySelf</a>
-            </li>
+
             <li class="navbar-item">
                 <a href="#contact" class="smooth">Contact</a>
             </li>
         </ul>
 	</nav>
 
-    <main class="container">
-        <section id="resume">Resumen</section>
-        <section id="work">My work</section>
-        <section id="me">MySelf</section>
+    <main class="container">  
+        <section id="me" class="yo section-container clearfix">
+            <div class="skills-tag row container">
+                <h1>SKILLS</h1>
+            </div>
+            <div class="target">
+                <div class="target-item card-item">
+                    <article class="language-skills">
+                        Aqui mis lenguajes
+                        <ul>
+                            <li>
+                                <div class="name-skill">Spanish</div>
+                                <progress class="progress-item" max="100" value="90"></progress>
+                                </div>
+                            </li>
+                            <li>English</li>
+                            <li>German</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="target-item card-item card-item-central">
+                    <article class="technical-skills">
+                        Aqui mis tecnicas
+                        <ul>
+                            <li>Hardware</li>
+                            <li>Firmware</li>
+                            <li>Software</li>
+                            <li>BBDD</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="target-item card-item">
+                    <article class="team-skills">
+                        Aqui mis team
+                        <ul>
+                            <li>Supervision</li>
+                            <li>Coaching</li>
+                            <li>Support Others</li>
+                            <li>Communication</li>
+                        </ul>
+                    </article>
+                </div>                
+            </div>
+        </section>      
+        <section id="work" class="my-work clearfix section-container">My work</section>
+        <div class="batman-video col-6">
+                    <video width="550" height="300" autoplay muted>
+                        <source src="./video/future.3gp" type="video/3gp">
+                    </video>
+            </div>
         <section id="contact">Contact</section>
     </main>
     <footer>
