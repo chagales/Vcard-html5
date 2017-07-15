@@ -23,7 +23,8 @@ body{
     clear: both;
 }
 .navbar{
-    /*background-color: var(--main-text-color);*/
+    background-color: blueviolet;
+    opacity: 0.5;
     width: 100%;
     position: fixed;
     top: 0;
@@ -55,7 +56,8 @@ body{
 
 .navbar > .navbar-list > .navbar-item.active a{    
     border:1px solid #666666;    
-    color:white;
+    color:#ECDCC0;
+    font-size: 24px;
 }
 
 .navbar > .navbar-list > .navbar-item a:hover{
@@ -137,7 +139,10 @@ canvas{
     text-align: center;
     font-size: 38px;
     color: black;
-    z-index: 1;      
+    z-index: 1;    
+    animation: titleanimation 2s forwards;
+    animation-delay: 0.8s;
+    visibility: hidden;  
 }
 
 .title-cite {
@@ -180,53 +185,49 @@ canvas{
     text-align: center;
     font-size: 38px;
 }
+
+.section-container{
+    padding-left: 40px;
+}
 .target{
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .target-item{
     display: inline-block;
 }
 
 .card-item{
+    top: 1%;
     border: 0.5px solid grey;
     background-color: white;
-    height: 35%;
+    height: 250px;
     width: 30%;
-    margin-top:10px;
+    padding: 10px;
+    /*margin-top:10px;*/
 }
 .card-item-central{
     padding-right: 20px;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 .name-skill{
     margin: 0 0 6px;
     position: relative;
     display: block;
-    font-size: 14px;
+    font-size: 20px;
     color: #363636;
 }
 .skills-item{
     list-style-type: none;
     margin: 0;
     float: none;
-    text-align: center;
+    text-align: left;
     font-size: 0;
 }
 .name-skill{
     text-decoration: none;
 }
 
-progress[max]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color:greenyellow;
-    border: none;
-    width: 300px;
-    height: 8px;
-    border-radius: 2px;
-}
 progress[value]{
         /* Eliminamos la apariencia por defecto */
     -webkit-appearance: none;
@@ -238,11 +239,91 @@ progress[value]{
     /* Aplicamos las dimensiones */
     width: 300px;
     height: 8px;
-    border-radius: 2px;
+    border-radius: 5px;
     /* Aplicamos color a la barra */
-    color: blueviolet;
+    color: blueviolet;    
 }
 
     /* Compatibilidad de color en Firefox y Chrome */
 progress::-moz-progress-bar { background: blueviolet; }
 progress::-webkit-progress-value { background: blueviolet;}
+
+.contact-container{
+    position: relative;
+}
+.line-work{
+    position: absolute;
+    background-color: blueviolet;
+    width: 3px;
+    height: 82%;
+    top:165px;
+    left:50%;
+}
+.my-work{
+    position: relative;
+    height: 300vh;
+}
+.work-card-item{
+    top: 1%;
+    border: 0.5px solid grey;
+    background-color: white;
+    height: 350px;
+    width: 400px;
+    padding: 10px;
+    /*margin-top:10px;*/
+}
+.leftside{    
+    left: 0;
+    margin-right: 50%;
+}
+.rightside{
+    margin-left: 50%;
+    right: 0;
+}
+.date-work{
+    font-size: 20px;
+}
+.date-work-init{
+    font-size:20px;
+    position: relative;
+    padding-top: 1%;
+    text-align: center;
+    margin-right: 20%;
+}
+
+.medium{
+    height: 460px;
+}
+.big{
+    height: 670px;
+}
+#circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left:50vh;
+    background: blueviolet;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 21%;
+}
+.contact-container{
+    display: inline-block;
+}
+.campo-libre{
+    
+}
+
+@keyframes titleanimation{
+    0% {
+        font-size: 50px;
+    }
+    50% {
+        font-size: 40px;
+    }
+    100%{
+        font-size: 38px;
+        visibility: visible;
+    }
+}
