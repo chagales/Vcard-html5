@@ -7,6 +7,8 @@ var ejercitoInput = document.getElementById("como");
 var texlibre = document.getElementById("free");
 
 var submitButton = document.getElementById("enviar");
+var navbarItems = document.getElementsByClassName('howInput');
+
 
 var howInput = {
     how1: document.getElementById("linkedin_id"),
@@ -15,20 +17,26 @@ var howInput = {
     how4: document.getElementById("other_text_id")
 };
 
-function limitWords(id) {
-    var maxWords=5;
-    var d=document.getElementById(id);
-    var num= d.value.split(' ').length;
-    if ( d.value.split(' ').length > maxWords ) {
-        alert("Limite de 150 palabras");
-        console.log(num);
-        texlibre.focus();
-        event.preventDefault();
+$('input[type="radio"]').on('click change', function(e) {
+    console.log(e.type);
+    if(form.tipo_how[0].checked){        
+        document.getElementById('other_text_id').disabled = true;
+        //event.preventDefault();
         return false;
     }
-}
+    if(form.tipo_how[1].checked){        
+        document.getElementById('other_text_id').disabled = true;
+        //event.preventDefault();
+        return false;
+    }
+    if(form.tipo_how[2].checked){
+        document.getElementById('other_text_id').disabled = false;
+        //event.preventDefault();
+        return false;
+    }
+});
 
-form.addEventListener("click",function(event){
+/*form.addEventListener("click",function(event){
     if(form.tipo_how[0].checked){
         document.getElementById('other_text_id').disabled = true;
         //event.preventDefault();
@@ -45,6 +53,21 @@ form.addEventListener("click",function(event){
         return false;
     }
 });
+*/
+function limitWords(id) {
+    var maxWords=150;
+    var d=document.getElementById(id);
+    var num= d.value.split(' ').length;
+    if ( d.value.split(' ').length > maxWords ) {
+        alert("Limite de 150 palabras");
+        console.log(num);
+        texlibre.focus();
+        event.preventDefault();
+        return false;
+    }
+}
+
+
 
 
 

@@ -10,7 +10,7 @@
     <title>Vcard fmunozbabiano</title>
 
     <script src="./js/jquery-3.2.1.js"></script>
-    <script src="./js/menus.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/number-polyfill.js"></script>
 
 </head>
@@ -30,17 +30,17 @@
 
 	<nav class="navbar">
         <ul class="navbar-list">
-            <li class="navbar-item active">
+            <li id="header_id" class="navbar-item active header-item">
                 <a href="#header" class="smooth">About Me</a>
             </li>       
-            <li class="navbar-item">
+            <li id="me_id" class="navbar-item me-item">
                 <a href="#me" class="smooth">Skills</a>
             </li>     
-            <li class="navbar-item">
+            <li id="work_id" class="navbar-item work-item">
                 <a href="#work" class="smooth">My Work</a>
             </li>
 
-            <li class="navbar-item">
+            <li id="contact_id" class="navbar-item contact-item">
                 <a href="#contact" class="smooth">Contact</a>
             </li>
         </ul>
@@ -350,7 +350,6 @@
 <script src="./js/animated.js"></script>
 <script src="./js/particles.js"></script>
 <script src="./js/app.js" ></script>  
-<script src="./js/menu.js"></script>
 <script src="./js/notification.js"></script>
 <script src="./js/form.js"></script>
 <script src="./js/ajax.js"></script>
