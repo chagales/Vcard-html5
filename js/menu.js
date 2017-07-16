@@ -58,9 +58,9 @@ var acumulativeOffset = function (element) {
     return top;
 }
 
-var offsetQuienSoy = acumulativeOffset(document.getElementById('quien-soy')) - 50;
-var offsetEquipo = acumulativeOffset(document.getElementById('equipo')) - 50;
-var offsetTransporte = acumulativeOffset(document.getElementById('transporte')) - 50;
+var offsetQuienSoy = acumulativeOffset(document.getElementById('me')) - 50;
+var offsetEquipo = acumulativeOffset(document.getElementById('work')) - 50;
+var offsetTransporte = acumulativeOffset(document.getElementById('contact')) - 50;
 var navbar = document.getElementsByClassName('navbar')[0];
 
 window.addEventListener('scroll', changeMenuStyle);
@@ -77,7 +77,7 @@ function changeMenuStyle(event) {
         }
         
         deleteActiveClass();
-        document.querySelector("a[href='#']").parentNode.classList.add("active");
+        document.querySelector("a[href$='header']").parentNode.classList.add("active");
     } else if (pageOffset >= offsetQuienSoy && pageOffset < offsetEquipo) {
         if (!previous || previous !== 2) {
             previous = 2;
