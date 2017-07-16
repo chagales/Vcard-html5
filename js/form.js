@@ -2,7 +2,7 @@ var form =  document.getElementsByTagName('form')[0];
 
 var inputNombre = document.getElementById("nombre");
 var inputApellidos = document.getElementById("apellidos");
-var emailInput = document.getElementById("email");
+var emailInput = document.getElementById("email-form");
 var ejercitoInput = document.getElementById("como");
 var texlibre = document.getElementById("free");
 
