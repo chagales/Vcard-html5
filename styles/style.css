@@ -114,14 +114,14 @@ canvas{
     transition: background-size 0.5s;*/
     position: absolute;
     border: 1px solid #000;
-    background: url(../images/static/foto.jpg) no-repeat center center;
+    background: url(../images/static/foto.jpg) no-repeat center center;    
     max-width: 250px;
     height: 250px;
     border-radius: 50%;
     z-index: 2;
     top:-10%;
     left:0;
-    right:0;
+    right:80%;
     bottom:0;
     margin:auto;
        
