@@ -43,19 +43,33 @@ Un campo de textarea, con un máximo de 150 palabras (no caracteres).
 
 Un botón de envio.
 
-Se deberá implementar una sección para el uso de peticiones AJAX ( por ejemplo una zona de gestión de tareas como veremos en el curso).
+Se deberá implementar una sección para el uso de peticiones AJAX ( por ejemplo una zona de gestión de tareas como veremos en el curso). ***Implementado la gestion de tareas para dejar mensajes***
 
 Se deberá crear una o más hojas de estilos CSS para aplicar el diseño deseado a nuestra web.
+***Se disponen de las siguientes hojas de estilo, style.css***
 
 Las fuentes, imágenes, videos, .... utilizados deben de ser de libre distribución.
 
 Se puede usar cualquier regla de estilo CSS 3 que cumpla con las condiciones de compatibilidad de la aplicación (ver abajo).
 
-Se deberá crear archivos JavaScript para definir las interacciones definidas en nuestra pagina web.
+Se deberá crear archivos JavaScript para definir las interacciones definidas en nuestra pagina web. ***Se incluyen los siguientes ficheros JS, ajax.js, animated.js, app.js, countwords.js , form.js, jquery-3.2.1.js, menu.js, notification.js, particles.js***
 
 Se permite el uso de JQuery.
 
 Condiciones de compatibilidad:
 La pagina web tiene que ser visible correctamente tanto en Google Chrome, como en Firefox y en Internet Explorer versión 11 o EDGE.
+
+***Probado en*** 
+
+**Chrome, funcionamiento correcto**
+
+**Firefox, funcionamiento correcto**
+
+**EDGE, funcionamiento correcto**
+
+**IE11, funcionamiento correcto**
+
+
+
 
 No sepermite el uso de frameworks externos como Boostrap.

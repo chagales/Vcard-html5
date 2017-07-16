@@ -3,7 +3,7 @@ var navbarItems = document.getElementsByClassName('navbar-item');
 for (var i = 0; i < navbarItems.length; i++) {
     navbarItems[i].addEventListener('click', function (event) {
         var sectionToGo = this.getElementsByTagName('a')[0].href.split("#");
-
+        console.log("Estoy");
         deleteActiveClass();
         this.classList.add('active');
         
@@ -86,7 +86,7 @@ function changeMenuStyle(event) {
         }
         
         deleteActiveClass();
-        document.querySelector("a[href$='quien-soy']").parentNode.classList.add("active");
+        document.querySelector("a[href$='me']").parentNode.classList.add("active");
     } else if (pageOffset >= offsetEquipo &&  offsetQuienSoy < offsetTransporte) {
         if (!previous || previous !== 3) {
             previous = 3;
@@ -96,5 +96,14 @@ function changeMenuStyle(event) {
 
         deleteActiveClass();
         document.querySelector("a[href$='work']").parentNode.classList.add("active");
-    }   
+    } else if (pageOffset >= offsetTransporte) {
+        if (!previous || previous !== 4) {
+            previous = 4;
+        } else if (previous === 4){
+            return false;
+        }
+
+        deleteActiveClass();
+        document.querySelector("a[href$='contact']").parentNode.classList.add("active");
+    }  
 }
