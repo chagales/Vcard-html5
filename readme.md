@@ -29,7 +29,7 @@ También se deberá implementar un menú para poder navegar por las diferentes s
 
 Se deberá implementar animaciones CCS sin librerias externas. ***Animación de particulas y zoom de title cite***
 
-En la zona de formulario, se deberá implementar mínimo:
+En la zona de formulario, se deberá implementar mínimo: ***Formulario implementado con todas las comprobaciones***
 
 Un campo de nombre requerido.
 

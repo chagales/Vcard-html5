@@ -9,6 +9,8 @@
     
     <title>Vcard fmunozbabiano</title>
 
+    <script src="./js/jquery-3.2.1.js"></script>
+
 </head>
 <body>
     <header>
@@ -227,15 +229,41 @@
                 2011...
             </div>
         </section>
-        <div class="cv-video clearfix">
+        <!--<div class="cv-video clearfix">
                     <video width="550" height="300" controls muted>
                         <source src="./video/future2.mp4">
                     </video>
-            </div>
+            </div>-->
         <section id="contact">  
             <div class="skills-tag">
                 <h1>Contact</h1>
-            </div>       
+            </div> 
+            <div class="contact">
+                <ul class="contact-icon">
+                    <li class="icon">
+                        <a href="https://www.linkedin.com/in/fmunozbabiano/">
+                            <img class="icon-img" src="./images/icon/linkedin-1.svg" alt="linkedin">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="https://github.com/chagales/">
+                            <img class="icon-img" src="./images/icon/github-mark-logo.png" alt="github">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="https://plus.google.com/+FedericoMu%C3%B1ozBabiano">
+                            <img class="icon-img" src="./images/icon/google-plus-icon-logo.png" alt="google++">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="https://twitter.com/chagales">
+                            <img class="icon-img" src="./images/icon/twitter.png" alt="twitter">
+                        </a>
+                    </li>
+                </ul>
+			</div>
+
+
             <main class="container">
                 <section class="contact section-container">                
                     <div class="contact-container">
@@ -254,34 +282,59 @@
                                         <label for="email">Email</label>
                                         <input type="email" id="email" name="email" placeholder="name@company.com"
                                         pattern="[A-Za-Z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required >
-                                    </div>
-
+                                    </div>                                    
                                     <div class="form-row">
-                                        <div>How</div>
-                                        <label for="linkedin">Linkedin</label>
-                                        <input type="radio" id="linkedin_id" name="tipo_linkedin" value="Linkedin" required>
+                                        <div class="como">How</div>
 
-                                        <label for="twitter">Twitter</label>
-                                        <input type="radio" id="twitter_id" name="tipo_twitter" value="Twitter" required>
+                                        <label for="how_1">Linkedin</label>
+                                        <input type="radio" id="linkedin_id" name="tipo_how" value="Linkedin" required>
 
-                                        <label for="other">Other</label>
-                                        <input type="radio" id="other_id" name="tipo_other" value="Other" required>
+                                        <label for="how_2">Twitter</label>
+                                        <input type="radio" id="twitter_id" name="tipo_how" value="Twitter" required>
+
+                                        <label for="how_3">Other</label>
+                                        <input type="radio" id="other_id" name="tipo_how" value="Other" required>
+                                                                                
                                     </div>
-
+                                    <div class="form-row">
+                                    <label for="other-text"></label>
+                                        <input type="text" id="other_text_id" name="tipo_other_text" size="100" disabled>
+                                    </div>
                                     <div class="form-row">
                                         <label for="Mobile">+34...</label>
-                                        <input type="number" id="tlf" name="telefono" required>
+                                        <input type="text" id="tlf" name="telefono" placeholder="630898989" required>                                        
+                                    </div>
+                                    <div class="form-row">
+                                        <textarea id="free" rows="4" cols="50"></textarea>
                                     </div>
 
                                     <div class="form-row">
-                                    <input type="submit" value="Enviar">
+                                        <button type="submit" id="enviar">Enviar</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="campo libre">
-                            <input type="text" id="free" name="free" placeholder="Introduce something" size="200">
-                        </div>
+                        <div class="mensaje">
+                            <h2>Something</h2>
+
+			                <div class="col-6">
+				                <h3>Add New</h3>
+				                <form>
+                                    <input type="text" id="newTaskName" name="name" placeholder="Nueva tarea..." required>
+                                    <br>
+                                    <br>
+                                    <button id="sendNewTask">Enviar</button>
+	                			</form>
+			                </div>
+
+			                <div class="col-6">
+				                <h3>Something</h3>
+				                <div class="loader"></div>
+			            	<div>
+					            <ul id="taskContainer">
+					            </ul>
+				            </div>
+			            </div>                        
                     </div>
 
                 </section>    
@@ -296,4 +349,7 @@
 <script src="./js/particles.js"></script>
 <script src="./js/app.js" ></script>  
 <script src="./js/menu.js"></script>
+<script src="./js/notification.js"></script>
+<script src="./js/form.js"></script>
+<script src="./js/ajax.js"></script>
 </html>

@@ -127,9 +127,6 @@ canvas{
        
 }
 
-.title-img:hover{
-    background-size: 115% 115%;
-}
 
 .title {
 	position: absolute;
@@ -308,6 +305,20 @@ progress::-webkit-progress-value { background: blueviolet;}
     border-radius: 50px;
     margin-left: 21%;
 }
+.contact-icon{
+    margin-left: 20%;
+}
+.icon{
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 10%;
+}
+.icon-img{
+    height: 40px;
+    width: 40px;    
+}
+
 .contact-container{
     display: inline-block;
 }

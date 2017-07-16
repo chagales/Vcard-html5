@@ -95,6 +95,6 @@ function changeMenuStyle(event) {
         }
 
         deleteActiveClass();
-        document.querySelector("a[href$='equipo']").parentNode.classList.add("active");
+        document.querySelector("a[href$='work']").parentNode.classList.add("active");
     }   
 }
