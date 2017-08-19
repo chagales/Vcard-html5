@@ -8,7 +8,7 @@ var drawTasks = function() {
 	} else {
 		var contentToAdd = '';
 		for (var i = 0; i < tasks.length; i++) {
-			contentToAdd += '<li class="task-item">' + tasks[i].name + '<button class="deleteTask" data-task-id="' + tasks[i].id + '">Eliminar</button></li>'
+			contentToAdd += '<li class="task-item">' + tasks[i].Mensaje + '<button class="deleteTask" data-task-id="' + tasks[i].id + '">Eliminar</button></li>'
 		}
 		$('#taskContainer').append(contentToAdd);
 	}
@@ -22,6 +22,7 @@ var getTasks = function () {
     XHR.onreadystatechange = function () {
         if (XHR.readyState === 4) {
             tasks = JSON.parse(XHR.responseText);
+            console.log(tasks);
             drawTasks();
         } else if (XHR.readyState === 4 && XHR.status === 404) {
             console.log("Página no encontrada");
@@ -37,7 +38,7 @@ var createTask = function (name) {
     XHR.setRequestHeader("Content-Type", "application/json");
 
     XHR.onreadystatechange = function () {
-        if (XHR.readyState === 4) {
+        if (XHR.readyState === 4 && XHR.status === 201) {
             tasks.push(JSON.parse(XHR.responseText));
             drawTasks();
         } else if (XHR.readyState === 4 && XHR.status === 404) {
@@ -45,7 +46,7 @@ var createTask = function (name) {
         }
     }
 
-    XHR.send(JSON.stringify({"name": name}));
+    XHR.send(JSON.stringify({"Mensaje": name}));
 }
 
 var deleteTask = function (id) {
@@ -77,3 +78,21 @@ $(document).on('click', '.deleteTask', function(){
 	var id = $(this).data('taskId');
 	deleteTask(id);
 });
+
+/*var XHR;
+
+if (window.XMLHttpRequest){
+  XHR = new XMLHttpRequest();
+}
+
+XHR.open("POST","http://localhost:8000/api/tasks",true);
+XHR.setRequestHeader("Content-Type","application/json");
+
+XHR.onreadystatechange = function(){
+  if(XHR.readyState === 4 && XHR.status === 201){
+    console.log(XHR.responseText);
+  }
+}
+
+XHR.send(JSON.stringify({"Mensaje":"Inicio"}));
+*/
