@@ -48,7 +48,10 @@ $( document ).ready(function() {
         return false;
     }
 
-    if (limitWords("free")){
+    if (limitWords("free") > 150){
+        inputNombre.focus();
+        event.preventDefault();
+        console.log("150 max");
         return false;
     }
 
@@ -70,10 +73,9 @@ function limitWords(id) {
     var num= d.value.split(' ').length;
     if ( d.value.split(' ').length > maxWords ) {
         alert("Limite de 150 palabras");
+        console.log("Por encima");
         console.log(num);
-        texlibre.focus();
-        event.preventDefault();
-        return false;
+        return num;
     }
 }
 
