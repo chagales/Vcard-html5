@@ -59,10 +59,15 @@ $( document ).ready(function() {
 
     //event.preventDefault();
 
-    setTimeout(function () {
-        //submitButton.removeAttribute("disabled");
-        sendNotification("Formulario recibido", "Body de ejemplo");
-    }, 1000);
+		sendForm({
+			'name': inputNombre.value,
+			'phone': inputTlf.value,
+			'email': inputEmail.value,
+			'conocido': inputConocido.val(),
+			'comentarios': comentariosTextarea.val()
+		});
+		event.preventDefault();
+		return false;
 
 });
 
@@ -70,11 +75,13 @@ $( document ).ready(function() {
 function limitWords(id) {
     var maxWords=150;
     var d=document.getElementById(id);
-    var num= d.value.split(' ').length;
-    if ( d.value.split(' ').length > maxWords ) {
+    var comentario = d.value;
+    var comentarioclean = comentario.replace(/\s\s+/g, ' ').trim();
+		var comentariocleanWithoutSpaces = comentarioclean.split(' ');
+		var numberOfWords = comentariocleanWithoutSpaces.length;
+    if ( numberOfWords > maxWords ) {
         alert("Limite de 150 palabras");
         console.log("Por encima");
-        console.log(num);
         return num;
     }
 }
